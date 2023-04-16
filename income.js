@@ -15,7 +15,10 @@ let form=document.querySelector("form");
 				  alert("please Ender the value");
 				 }
 				  else if((!isNaN(value))){
-					  alert("name of transaction is only for letters")
+					  alert("name of transaction is only for letters");
+				  }
+				  else if(isNaN(name)){
+					alert("amount is only for numbers");
 				  }
 			  else{
 				b={
