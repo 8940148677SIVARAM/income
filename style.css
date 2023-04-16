@@ -101,6 +101,7 @@ li{
     background-color:blanchedalmond;
     font-size: 30px;
     color: gray;
+    overflow: hidden;
 }
 li span{
     font-size: 30px;
