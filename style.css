@@ -1,0 +1,108 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+h1{
+    background-color:bisque;
+    text-align: center;
+    padding: 1% 0;
+    font-family: cursive;
+    position: sticky;
+    top: 0px;
+    z-index: 4;
+}
+marquee{
+    background-color:coral;
+    color: burlywood;
+}
+.container{
+    width:90%;
+    margin: 0 auto;
+}
+.tracker{
+    width: 100%;
+    background-color:blanchedalmond;
+    line-height: 2;
+}
+.flex{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.red{
+    border:2px solid red;
+    border-radius:25px;
+}
+.normal{
+    border:2px solid green;
+    border-radius:25px;
+}
+.col-1{
+    width: 100%;
+    text-align: center;
+}
+.col-2{
+    width:50%;
+}
+#income{
+    color: green;
+}
+#expence{
+    color: red;
+}
+.card{
+    margin-top: 2%;
+}
+.card .col-1 h3{
+    background-color:cornsilk ;
+    text-align: center;
+    padding:2% 0px;
+}
+label{
+    color: grey;
+    font-weight: bold;
+}
+input{
+    padding: 6%;
+    border-radius: 25px;
+    border:none;
+}
+input:focus{
+    border-color: gray;
+}
+button{
+    padding: 6%;
+    border:none;
+    background-color:blue;
+    border-radius: 25px;
+    margin:4%;
+    color: wheat;
+    font-weight: bolder;
+}
+button:hover{
+    background-color: greenyellow;
+    color: crimson;
+}
+ul{
+    list-style: none;
+}
+li button{
+    margin:0px;
+    padding: 2%;
+    margin-left: 2%;
+}
+li button:hover{
+    background-color: red;
+    color: azure;
+}
+li{
+    background-color:blanchedalmond;
+    font-size: 30px;
+    color: gray;
+}
+li span{
+    font-size: 30px;
+    color:black;
+}

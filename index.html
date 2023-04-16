@@ -1,0 +1,117 @@
+<!doctype html>
+	<html>
+		<head>
+		   <meta charset="UTF-8">
+			<link rel="stylesheet" href="style.css">
+			<title>INCOME-TRACKER</title>
+			<link rel="icon" href="money.jpg">
+			<meta name="keywords" content="HTML, CSS, JavaScript">
+			<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		</head>
+		<body>
+			<h1>Income Tracker</h1>
+			<marquee width="100%" direction="right" height="25px">
+             Income Enter the amount positive.Expence Enter the amount nagative.
+            </marquee>
+			<div class="container">
+				<div class="tracker">
+					<div class="flex">
+						<div class="card col-3">
+						    <div class="flex ">
+							   <div class="col-1">
+								<h2>YOUR BALANCE<br>₹<span id="balance">0.00</span></h2>
+								</div>
+								<div class="col-1 flex">
+									<div class="col-2">
+										<h3>INCOME<BR>₹<span id="income">0.00</span></h3>
+									</div>
+									<div class="col-2" >
+										<h3>EXPENSE<BR>₹<span id="expence">0.00</span></h3>
+									</div>
+								</div>
+						    </div>
+						</div>
+						<div class="card add col-3">
+							<form>
+							<div class="col-1">
+								<h2>Add new transaction</h2>
+							</div>
+							<div class="col-1">
+								<label for="name">Name of transaction :</label>
+							</div>
+							<div class="col-1">
+								<input type="text" id="name" placeholder="enter the name ">
+							</div>
+							<div class="col-1">
+								<label for="Amount">Amount :</label>
+							</div>
+							<div class="col-1">
+								<input type="text" id="Amount" placeholder="enter the Ammout">
+							</div>
+							<div class="col-1">
+								<button type="submit">Add transaction</button>
+							</div>
+						    </form>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="container">
+				<div class="card">
+					<div class="col-1">
+						<h3>History</h3>
+						<ul id="story">
+						</ul>
+					</div>
+				</div>
+			</div>
+			<script src="income.js">
+							</script>
+			<script>
+			function delt(e){
+			let h=JSON.parse(localStorage.getItem("transaction"));
+			let s=document.getElementById("story");
+			let inc=document.getElementById("income");
+			   let  out=document.getElementById("expence");
+			   let  bal=document.getElementById("balance");
+			delete h[e];
+			let siva=h.flat();
+			localStorage.removeItem("transaction");
+			localStorage.setItem("transaction",JSON.stringify(siva));
+              let ram=JSON.parse(localStorage.getItem("transaction"));
+			  console.log(ram)
+			  let income=[];
+				let expence=[];
+				let i=0;
+				let j=0;
+				ram.map((e)=>
+				{
+				  if((e.amount<0)){
+				      ++i;
+					  expence.push(parseInt(e.amount));
+					  out.innerHTML=expence.reduce((e,b)=>e+b); 
+					}
+				 else if(e.amount>0){
+				      ++j;
+					  income.push(parseInt(e.amount));
+				  inc.innerHTML=income.reduce((e,b)=>e+b);
+				}
+				if(i===0){
+				out.innerHTML=0;
+				}
+				if(j==0){
+				inc.innerHTML=0;
+				}
+				bal.innerHTML=parseInt(out.innerHTML)+parseInt(inc.innerHTML)});
+				if(i===0){
+				out.innerHTML=0;
+				}
+				if(j==0){
+				inc.innerHTML=0;
+				}
+				bal.innerHTML=parseInt(out.innerHTML)+parseInt(inc.innerHTML)
+			s.innerHTML=ram.map((e,i)=>`<li class=${e.amount<0 ?"red":"normal"}>Name of the transaction:<span>${e.name}</span>;Amount of paying:<span>${e.amount}</span><button onclick="delt(${i})" type="submit"}>remove</button></li>`);					
+}
+			</script>
+		</body>
+	</html>
