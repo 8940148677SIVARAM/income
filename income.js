@@ -1,4 +1,4 @@
-localStorage.setItem("transaction",JSON.stringify([]));
+
 let form=document.querySelector("form");
 			form.addEventListener('submit',function(s){
 				s.preventDefault();
@@ -10,7 +10,7 @@ let form=document.querySelector("form");
 			   let inc=document.getElementById("income");
 			   let  out=document.getElementById("expence");
 			   let  bal=document.getElementById("balance");
-			   let a=JSON.parse(localStorage.getItem("transaction"));
+			   let a=JSON.parse(localStorage.getItem("transaction")) || [];
 				if((name=='') || value==''){
 				  alert("please Ender the value");
 				 }
