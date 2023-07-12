@@ -80,6 +80,7 @@ button{
     margin:4%;
     color: wheat;
     font-weight: bolder;
+	cursor:pointer;
 }
 button:hover{
     background-color: greenyellow;
