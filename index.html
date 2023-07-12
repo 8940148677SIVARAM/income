@@ -10,8 +10,9 @@
 		</head>
 		<body>
 			<h1>Income Tracker</h1>
-			<marquee width="100%" direction="right" height="25px">
+			<marquee width="100%" direction="left" height="25px">
              Income Enter the amount positive.Expence Enter the amount nagative.
+			 just Add one transaction. previous transaction list automatically on your board.
             </marquee>
 			<div class="container">
 				<div class="tracker">
@@ -112,6 +113,7 @@
 				bal.innerHTML=parseInt(out.innerHTML)+parseInt(inc.innerHTML)
 			s.innerHTML=ram.map((e,i)=>`<li class=${e.amount<0 ?"red":"normal"}>Name of the transaction:<span>${e.name}</span>;Amount of paying:<span>${e.amount}</span><button onclick="delt(${i})" type="submit"}>remove</button></li>`);					
 }
+
 
 			</script>
 		</body>
