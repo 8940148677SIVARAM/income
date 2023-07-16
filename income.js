@@ -45,7 +45,7 @@ function siva2002ram(first){
 
 }
 function ram(){
-	let h=JSON.parse(localStorage.getItem("transaction"));
+	let h=JSON.parse(localStorage.getItem("transaction")) || [];
 				let income=[];
 				let expence=[];
 				h.map((e)=>
