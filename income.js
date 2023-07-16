@@ -4,6 +4,7 @@ let form=document.querySelector("form");
 				s.preventDefault();
 				siva2002ram(true)
 		});
+
 function siva2002ram(first){
 	story=document.getElementById("story");
 				transactionname=document.getElementById("name");
