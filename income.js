@@ -43,8 +43,7 @@ function siva2002ram(first){
 			  }
 			  let h=JSON.parse(localStorage.getItem("transaction")) || [] ;
 			story.innerHTML=h.map((e,i)=>`<li class=${e.amount<0 ?"red":"normal"}><h6>transaction:</h6><h6>Amount:</h6><span>${e.name}</span><span>${e.amount}</span><button onclick="delt(${i})" type="submit"}>remove</button></li>`);
-
-}
+			  }
 function ram(){
 	let h=JSON.parse(localStorage.getItem("transaction")) || [];
 				let income=[];
