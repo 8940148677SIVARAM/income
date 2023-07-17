@@ -69,7 +69,7 @@
 			</script>
 			<script>
 			function delt(e){
-			let h=JSON.parse(localStorage.getItem("transaction"));
+			let h=JSON.parse(localStorage.getItem("transaction")) || [];
 			let s=document.getElementById("story");
 			let inc=document.getElementById("income");
 			   let  out=document.getElementById("expence");
